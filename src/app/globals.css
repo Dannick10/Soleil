@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-philosopher), sans-serif;
+}
+
+.playfair {
+  font-family: var(--font-playfair), serif;
+}
