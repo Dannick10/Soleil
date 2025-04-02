@@ -1,11 +1,124 @@
-import React from 'react'
+"use client";
+import Image from "next/image";
+import { ReactNode } from "react";
+import { BiCar, BiShoppingBag } from "react-icons/bi";
+import { BsTree } from "react-icons/bs";
+import { FaGraduationCap } from "react-icons/fa";
+import { GiPawPrint } from "react-icons/gi";
+import { LuBuilding2 } from "react-icons/lu";
+
+type NeighborhoodAdvantage = {
+  icon: ReactNode;
+  title: string;
+  description: string;
+};
 
 const NeighborhoodAdvantages = () => {
+  const NeighborhoodItems: NeighborhoodAdvantage[] = [
+    {
+      icon: <BiCar />,
+      title: "Fácil Acesso",
+      description: "Localização estratégica para deslocamento por veículo",
+    },
+    {
+      icon: <LuBuilding2 />,
+      title: "Perto de Hospital",
+      description: "Proximidade a centros médicos de excelência",
+    },
+    {
+      icon: <GiPawPrint />,
+      title: "Pet Friendly",
+      description: "Ambiente acolhedor para seus animais de estimação",
+    },
+    {
+      icon: <BsTree />,
+      title: "Perto de Parque",
+      description: "Ambiente acolhedor para seus animais de estimação",
+    },
+    {
+      icon: <BiShoppingBag />,
+      title: "Perto de Shopping",
+      description: "Conveniência para compras e entretenimento",
+    },
+    {
+      icon: <FaGraduationCap />,
+      title: "Educação",
+      description: "Próximo a instituições Liceu Pasteur, Colégio Marista...",
+    },
+  ];
+
   return (
-    <div>
+    <section id="empreendimento" className="py-10">
+      <div className="container max-w-[1100px] mx-auto px-4">
+        {/*descrição*/}
+        <div className="text-center pt-8 pb-8">
+          <div>
+            <div className="w-40 h-0.5 bg-[#B89355] mx-auto my-4"></div>
+            <h1 className="secondaryText text-2xl md:text-4xl font-bold tracking-widest">
+              Um Ícone do Luxo
+            </h1>
+          </div>
+        </div>
 
-    </div>
-  )
-}
+        <div className="flex flex-col-reverse md:flex-row w-auto gap-2 lg:gap-10 items-center secondaryText leading-relaxed">
+          <div className="space-y-4 md:w-2/4 ">
+            <h2 className="text-xl font-bold uppercase">
+              PRAÇA KANT CHÁCARA KLABIN
+            </h2>
 
-export default NeighborhoodAdvantages
+            <p className="text-sm leading-relaxed">
+              As vantagens de se morar na Chácara Klabin não são poucas. Um
+              bairro nobre e residencial com infraestrutura de comércio
+              essencial, transporte público e fácil acesso por veículo
+              automotivo, lazer com praças pet e parques.
+            </p>
+
+            <p className="text-sm leading-relaxed">
+              Próximo a instituições educacionais de prestígio como o Liceu
+              Pasteur, Colégio Marista Arquidiocesano e a faculdade ESPM, o
+              Soleil Klabin oferece o equilíbrio perfeito entre tranquilidade e
+              conveniência.
+            </p>
+
+            <div className="pt-4">
+              <button className="btnSecondary">SAIBA MAIS</button>
+            </div>
+          </div>
+          {/*foto*/}
+          <div className="w-full h-[378px] relative rounded-md overflow-hidden">
+            <Image
+              src="/images/perspective/Detalhe_Fachada_EF.jpg"
+              alt="Fachada do Soleil"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4 space-x-4 space-y-4 mt-8">
+          {NeighborhoodItems.map((item, index) => (
+            <div
+              className="p-4 duration-200 transition-transform rounded-lg border-b border-[#C9A96E] group sticky md:block top-20 left-0 bg-[#f7f7f7]"
+              key={index}
+            >
+              <div className="flex items-start mb-3 secondaryText">
+                <div className="flex justify-center items-center gap-2">
+                  <div className="w-10 h-10 bg-[#EFE5D3] primaryText flex items-center justify-center rounded-full text-xl relative group-hover:scale-110 duration-200">
+                    <span>{item.icon}</span>
+                    <div className="w-10 h-10 inset-2 top-0 left-0 border-b border-e rounded-full border-yellow-400 border-e-amber-300 group-hover:animate-spin absolute opacity-0 group-hover:opacity-100 duration-200"></div>
+                  </div>
+                  <h3 className="text-xl font-bold">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+              <p className="text-sm secondaryText">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NeighborhoodAdvantages;

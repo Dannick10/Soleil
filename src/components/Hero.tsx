@@ -39,7 +39,7 @@ const Hero = () => {
 
         <div className="text-center pt-8 pb-4">
           <div className="flex flex-col gap-4">
-            <p className="text-sm text-[#182842] font-bold tracking-[5px] mb-2">
+            <p className="text-sm text-[#182842] font-bold tracking-[5px] mb-1">
               Lançamento | Chácara Klabin
             </p>
             <div>

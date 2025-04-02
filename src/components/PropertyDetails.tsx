@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const PropertyDetails = () => {
   return (
-    <section id="empreendimento" className="py-4">
+    <section id="empreendimento" className="py-10">
       <div className="container max-w-[1100px] mx-auto px-4">
-        <div className="text-center pt-8 pb-4">
-          <div className="flex flex-col gap-4">
-            <p className="text-sm secondaryText font-bold tracking-[5px] mb-2">
+        <div className="text-center pt-8 pb-2">
+          <div className="flex flex-col gap-2">
+            <p className="text-sm secondaryText font-bold tracking-[5px] mb-1">
             SOLEIL BY <span className="primaryText">BOCA DO LOBO</span>
             </p>
             <div>
@@ -36,7 +36,7 @@ const PropertyDetails = () => {
               principais regiões de São Paulo.
             </p>
 
-            <p className="text-sm">
+            <p className="text-sm leading-relaxed">
             Um projeto onde cada detalhe é contornado por um brilho único e um calor que acolhe tudo à sua volta. Revelando uma beleza incomparável que se renova todas as manhãs.
             </p>
 

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { BiPause, BiPlay, BiVolumeFull, BiVolumeMute } from "react-icons/bi";
 
@@ -57,8 +58,8 @@ const YouTubePlayer = ({ videoId }: { videoId: string }) => {
     };
 
     return () => {
-        playerInstance.current?.destroy();
-      };
+      playerInstance.current?.destroy();
+    };
   }, [videoId]);
 
   const togglePlay = () => {
@@ -90,9 +91,20 @@ const YouTubePlayer = ({ videoId }: { videoId: string }) => {
     <div className="relative aspect-video group bg-black">
       <div ref={playerRef} className="w-full h-full" />
 
+      {/*thumbnail*/}
+      {progress <= 0 && (
+        <Image
+          src="/images/design/thumb.jpg"
+          alt="thumb"
+          fill
+          className="object-cover"
+        />
+      )}
+
       {/*controles customizados */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 primaryText">
-        <div className="flex justify-end">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent flex flex-col justify-between p-4 primaryText z-10">
+        {/*volume*/}
+        <div className="flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <button
             onClick={toggleMute}
             aria-label={isMuted ? "Ativar som" : "Desativar som"}
@@ -102,28 +114,40 @@ const YouTubePlayer = ({ videoId }: { videoId: string }) => {
           </button>
         </div>
 
+        {/*play controle*/}
         <div className="flex justify-center items-center">
-          <button
-            onClick={togglePlay}
-            aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
-            className="bg-gray-800/90 p-4 rounded-full hover:scale-110 transition-all duration-200 cursor-pointer"
-          >
-            {isPlaying ? <BiPause /> : <BiPlay />}
-          </button>
+          {isPlaying ? (
+            <button
+              onClick={togglePlay}
+              aria-label={"Pausar vídeo"}
+              className="bg-gray-800/90 p-4 rounded-full hover:scale-110 transition-all duration-200 cursor-pointer opacity-0 group-hover:opacity-100"
+            >
+              <BiPause />
+            </button>
+          ) : (
+            <button
+              onClick={togglePlay}
+              aria-label={"Reproduzir vídeo"}
+              className="bg-gray-800/90 p-4 rounded-full hover:scale-110 transition-all duration-200 cursor-pointer"
+            >
+              <BiPlay />
+            </button>
+          )}
         </div>
 
+        {/*barra de progresso*/}
         <div
-          className="h-1.5 bg-gray-600 rounded-full w-full cursor-pointer"
+          className="h-1.5 bg-gray-600 rounded-full w-full cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           onClick={handleProgressClick}
         >
           <div
-            className="h-full bg-[#C9A96E] rounded-full"
+            className="h-full bg-gradient-to-r from-[#C9A96E] to-yellow-300 rounded-full"
             style={{ width: `${progress}%` }}
           />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default YouTubePlayer
+export default YouTubePlayer;
