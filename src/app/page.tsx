@@ -1,9 +1,16 @@
+import DesignPartnership from "@/components/DesignPartnership";
+import Hero from "@/components/Hero";
+import PropertyDetails from "@/components/PropertyDetails";
+import VideoShowcase from "@/components/VideoShowCase";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-
+    <div>
+        <Hero/>
+        <PropertyDetails/>
+        <VideoShowcase/>
+        <DesignPartnership/>
     </div>
   );
 }
