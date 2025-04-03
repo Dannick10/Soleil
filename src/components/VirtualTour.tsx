@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { BiPlay, BiX } from "react-icons/bi";
-import { SiX } from "react-icons/si";
 
 const VirtualTour = () => {
   const [iframeActive, setIframeActive] = useState(false);

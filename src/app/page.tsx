@@ -9,7 +9,6 @@ import PropertyDetails from "@/components/PropertyDetails";
 import RelatedProjects from "@/components/RelatedProject";
 import VideoShowcase from "@/components/VideoShowCase";
 import VirtualTour from "@/components/VirtualTour";
-import Image from "next/image";
 
 export default function Home() {
   return (

@@ -1,4 +1,3 @@
-import { playfair } from "@/app/layout";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,7 +8,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#f7f7f7] ${playfair.className}`}
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#f7f7f7]`}
     >
       <div className="container max-w-[1100px] px-4 mx-auto">
         <div className="flex items-center justify-between py-4">

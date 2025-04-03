@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair, Philosopher } from "next/font/google";
+import { philosopher } from "./lib/fonts"
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export const philosopher = Philosopher({
-  variable: "--font-philosopher",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
-export const playfair = Playfair({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["300", "900"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${playfair.className} ${philosopher.className}`}>
+      <body className={`${philosopher.className}`}>
         <Header />
-        <div className={`flex min-h-screen flex-col bg-[#f7f7f7] pt-10 ${philosopher.className}`}>
+        <div className={`flex min-h-screen flex-col bg-[#f7f7f7] pt-10`}>
         {children}
         </div>
         <Footer/>
