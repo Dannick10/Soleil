@@ -53,7 +53,16 @@ const NeighborhoodAdvantages = () => {
         {/*descrição*/}
         <div className="text-center pt-8 pb-8">
           <div>
-            <div className="w-40 h-0.5 bg-[#B89355] mx-auto my-4"></div>
+          <svg
+            width="160"
+            height="4"
+            viewBox="0 0 160 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="mx-auto my-4"
+          >
+            <rect width="160" height="4" fill="#B89355" />
+          </svg>
             <h1 className="secondaryText text-2xl md:text-4xl font-bold tracking-widest">
               Um Ícone do Luxo
             </h1>
@@ -98,7 +107,7 @@ const NeighborhoodAdvantages = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4 space-x-4 space-y-4 mt-8">
           {NeighborhoodItems.map((item, index) => (
             <div
-              className="p-4 duration-200 transition-transform rounded-lg border-b border-[#C9A96E] group sticky md:block top-20 left-0 bg-[#f7f7f7]"
+              className="p-4 duration-200 transition-transform rounded-lg border-b border-[#C9A96E] group sticky top-20 left-0 bg-[#f7f7f7]"
               key={index}
             >
               <div className="flex items-start mb-3 secondaryText">

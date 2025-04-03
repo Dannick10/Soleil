@@ -17,7 +17,16 @@ const VideoShowcase = () => {
             {/*titulo*/}
             <div className="absolute flex justify-center items-center gap-4 -top-8 left-0">
               <BiStar className="primaryText" />
-              <div className="w-24 h-0.5 bg-[#B89355] mx-auto my-4"></div>
+              <svg
+                width="160"
+                height="4"
+                viewBox="0 0 160 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mx-auto my-4"
+              >
+                <rect width="160" height="4" fill="#B89355" />
+              </svg>
             </div>
             <h2 className="text-xl font-light secondaryText pb-6 tracking-[2px]">
               SOLEIL BY BOCA DO LOBO
@@ -50,7 +59,7 @@ const VideoShowcase = () => {
               </p>
             </div>
 
-            <div className="pt-4">
+            <div className="py-4">
               <button className="btnSecondary border-white hover:bg-white hover:text-[#182842]">
                 SAIBA MAIS
               </button>

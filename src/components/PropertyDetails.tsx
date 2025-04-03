@@ -16,7 +16,16 @@ const PropertyDetails = () => {
               <h1 className="secondaryText text-2xl md:text-4xl font-bold tracking-widest">
               Empreendimento
               </h1>
-              <div className="w-40 h-0.5 bg-[#B89355] mx-auto my-4"></div>
+              <svg
+                width="160"
+                height="4"
+                viewBox="0 0 160 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mx-auto my-4"
+              >
+                <rect width="160" height="4" fill="#B89355" />
+              </svg>
             </div>
           </div>
         </div>

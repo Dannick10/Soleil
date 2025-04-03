@@ -1,6 +1,7 @@
 import DesignPartnership from "@/components/DesignPartnership";
 import Hero from "@/components/Hero";
 import NeighborhoodAdvantages from "@/components/NeighborhoodAdvantages";
+import Perspectives from "@/components/Perspectives";
 import PropertyDetails from "@/components/PropertyDetails";
 import VideoShowcase from "@/components/VideoShowCase";
 import Image from "next/image";
@@ -13,6 +14,7 @@ export default function Home() {
         <VideoShowcase/>
         <DesignPartnership/>
         <NeighborhoodAdvantages/>
+        <Perspectives/>
     </div>
   );
 }

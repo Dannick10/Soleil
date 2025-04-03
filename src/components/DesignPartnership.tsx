@@ -10,7 +10,16 @@ const DesignPartnership = () => {
         {/*descrição*/}
         <div className="flex flex-col-reverse md:flex-row-reverse w-auto gap-2 md:gap-10 lg:gap-14 items-center secondaryText leading-relaxed">
           <div className="space-y-4 md:w-2/4 ">
-            <div className="w-24 h-0.5 bg-[#B89355] my-4"></div>
+          <svg
+            width="120"
+            height="4"
+            viewBox="0 0 160 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="my-4"
+          >
+            <rect width="120" height="4" fill="#B89355" />
+          </svg>
             <h2 className="text-xl font-bold uppercase tracking-wider">
               DESIGN DE <span className="primaryText">LUXO</span>
               <br />
@@ -38,17 +47,37 @@ const DesignPartnership = () => {
 
           {/*Foto*/}
           <div className="relative">
-            <div className="relative rounded-md overflow-hidden">
+            <div className="relative rounded-md overflow-hidden ">
               <Image
                 src="/images/design/movel.jpg"
                 alt="Fachada do Soleil"
                 width={450}
                 height={320}
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div className="bg-[#182842] w-[104px] h-[104px] absolute -bottom-4 -right-4 rounded-full flex flex-col justify-center items-center text-center">
-              <p className="tracking-[4px] text-[#f7f7f7] text-[10px]">DESIGN <br /> EXCLUSIVO</p>
-            </div>
+            <svg
+              className="absolute -bottom-4 -right-4"
+              width="104"
+              height="104"
+              viewBox="0 0 104 104"
+            >
+              <circle cx="52" cy="52" r="52" fill="#182842" />
+              <text
+                x="55"
+                y="48"
+                fill="#f7f7f7"
+                className="text-[10px]"
+                textAnchor="middle"
+                dominantBaseline="middle"
+              >
+                DESIGN{" "}
+                <tspan x="52" dy="12">
+                  EXCLUSIVO
+                </tspan>
+              </text>
+            </svg>
           </div>
         </div>
       </div>

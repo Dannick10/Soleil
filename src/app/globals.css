@@ -11,7 +11,7 @@ html {
 
 @layer components {
   .primaryText {
-    @apply text-[#C9A96E]
+    @apply text-[#8a641e]
   }
   .secondaryText {
     @apply text-[#182842]
