@@ -5,7 +5,7 @@ import Link from "next/link";
 const EbookDownload = () => {
   return (
     <section className="py-16 bg-[#F8F5EF]">
-      <div className="container max-w-[1100px] mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
           <div className="md:w-1/2">
             <Image
@@ -38,7 +38,7 @@ const EbookDownload = () => {
               <a
                 href="/book/Book_Soleil_Residences.pdf"
                 download="Soleil-by-Boca-do-Lobo.pdf"
-                className="btnPrimary"
+                className="btnPrimary text-center"
               >
                 BAIXAR BOOK COMPLETO
               </a>

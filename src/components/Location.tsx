@@ -35,7 +35,7 @@ const Location = () => {
 
   return (
     <section id="localizacao" className="py-4">
-      <div className="container max-w-[1100px] mx-auto px-4">
+      <div className="container mx-auto px-4">
         {/*titulo*/}
         <div className="text-center mb-12">
           <p className="text-sm secondaryText font-bold tracking-[3px] mb-1">

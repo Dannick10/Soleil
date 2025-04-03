@@ -10,7 +10,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-[#f7f7f7]`}
     >
-      <div className="container max-w-[1100px] px-4 mx-auto">
+      <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between py-4">
           <div>
             <Link href="/">

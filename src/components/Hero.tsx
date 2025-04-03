@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full pt-4 px-4">
-      <div className="container mx-auto max-w-[1100px]">
+      <div className="container mx-auto">
         {/*Titulo*/}
 
         <div className="text-center pt-8 pb-4">

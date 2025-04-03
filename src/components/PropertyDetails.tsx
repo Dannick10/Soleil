@@ -5,7 +5,7 @@ import Link from "next/link";
 const PropertyDetails = () => {
   return (
     <section id="empreendimento" className="py-10">
-      <div className="container max-w-[1100px] mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="text-center pt-8 pb-2">
           <div className="flex flex-col gap-2">
             <p className="text-sm secondaryText font-bold tracking-[5px] mb-1">
@@ -61,6 +61,7 @@ const PropertyDetails = () => {
               alt="Fachada do Soleil"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>

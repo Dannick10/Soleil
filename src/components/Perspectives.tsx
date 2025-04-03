@@ -1,98 +1,54 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const patch = "/images/perspective";
 
-const perspectives = [
-  {
-    title: "Perspectiva ilustrada da Fachada",
-    image: `${patch}/Fachada_EF.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Acesso",
-    image: `${patch}/Detalhe_Fachada_EF.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Lobby",
-    image: `${patch}/Lobby_EF.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Salão de Festas",
-    image: `${patch}/jantarDecorado.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Salão de Festas",
-    image: `${patch}/Salao_de_festas.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Lounge Externo",
-    image: `${patch}/Lounge_Externo.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m",
-    image: `${patch}/Piscina_Coberta_EF.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m",
-    image: `${patch}/Piscina_Coberta_Spa.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada da Brinquedoteca",
-    image: `${patch}/Brinquedoteca.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada da Piscina Descoberta",
-    image: `${patch}/Piscina_Descoberta.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada da Piscina Descoberta",
-    image: `${patch}/Piscina_Descoberta.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada da Quadra de Tênis",
-    image: `${patch}/Quadra_Tenis_EF.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Fitness",
-    image: `${patch}/Fitness.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Fitness",
-    image: `${patch}/Fitness02_EF2.jpg`,
-  },
-  {
-    title: "Perspectiva ilustrada do Living",
-    image: `${patch}/Living_Decorado_EF2_v2.jpg`,
-  },
-];
-
 export default function Perspectives() {
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [memoryIndex, SetMemoryIndex] = useState(0);
+  const [memoryIndex, setMemoryIndex] = useState(0);
   const ref = useRef(null);
 
+  const perspectives = useMemo(
+    () => [
+      { title: "Perspectiva ilustrada da Fachada", image: `${patch}/Fachada_EF.jpg` },
+      { title: "Perspectiva ilustrada do Acesso", image: `${patch}/Detalhe_Fachada_EF.jpg` },
+      { title: "Perspectiva ilustrada do Lobby", image: `${patch}/Lobby_EF.jpg` },
+      { title: "Perspectiva ilustrada do Salão de Festas", image: `${patch}/jantarDecorado.jpg` },
+      { title: "Perspectiva ilustrada do Salão de Festas", image: `${patch}/Salao_de_festas.jpg` },
+      { title: "Perspectiva ilustrada do Lounge Externo", image: `${patch}/Lounge_Externo.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m", image: `${patch}/Piscina_Coberta_EF.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m", image: `${patch}/Piscina_Coberta_Spa.jpg` },
+      { title: "Perspectiva ilustrada da Brinquedoteca", image: `${patch}/Brinquedoteca.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Descoberta", image: `${patch}/Piscina_Descoberta.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Descoberta", image: `${patch}/Piscina_Descoberta.jpg` },
+      { title: "Perspectiva ilustrada da Quadra de Tênis", image: `${patch}/Quadra_Tenis_EF.jpg` },
+      { title: "Perspectiva ilustrada do Fitness", image: `${patch}/Fitness.jpg` },
+      { title: "Perspectiva ilustrada do Fitness", image: `${patch}/Fitness02_EF2.jpg` },
+      { title: "Perspectiva ilustrada do Living", image: `${patch}/Living_Decorado_EF2_v2.jpg` },
+    ],
+    []
+  );
+
   const nextSlide = () => {
-    SetMemoryIndex(currentIndex);
+    setMemoryIndex(currentIndex);
     setCurrentIndex((prevIndex) =>
       prevIndex === perspectives.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
-    SetMemoryIndex(currentIndex);
+    setMemoryIndex(currentIndex);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? perspectives.length - 1 : prevIndex - 1
     );
   };
 
-  const prevIndex =
-    currentIndex === 0 ? perspectives.length - 1 : currentIndex - 1;
-  const nextIndex =
-    currentIndex === perspectives.length - 1 ? 0 : currentIndex + 1;
+  const prevIndex = currentIndex === 0 ? perspectives.length - 1 : currentIndex - 1;
+  const nextIndex = currentIndex === perspectives.length - 1 ? 0 : currentIndex + 1;
 
   return (
     <section id="perspectivas" className="py-16">
@@ -115,7 +71,7 @@ export default function Perspectives() {
 
         <div ref={ref} className="relative overflow-hidden">
           <div className="flex items-center justify-center">
-            {/* Imagem anterior*/}
+            {/* Imagem anterior */}
             <div
               className="hidden md:block relative h-80 w-24 overflow-hidden rounded-md opacity-70"
               style={{
@@ -127,22 +83,19 @@ export default function Perspectives() {
                 alt={perspectives[prevIndex].title}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  
               />
             </div>
 
             {/* Imagem principal */}
             <motion.div
-              key={`${memoryIndex}-currentIndex`}
+              key={currentIndex} 
               initial={{
                 opacity: 0.7,
                 x: currentIndex > memoryIndex ? 100 : -100,
-                rotateY:currentIndex > memoryIndex ? 30 : -30,
+                rotateY: currentIndex > memoryIndex ? 30 : -30,
               }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                rotateY: 0
-              }}
+              animate={{ opacity: 1, x: 0, rotateY: 0 }}
               transition={{ type: "keyframes", ease: "easeInOut" }}
               className="relative h-80 md:h-96 w-full md:w-3/4 mx-2 md:mx-4 overflow-hidden rounded-lg z-10 shadow-xl"
             >
@@ -151,11 +104,11 @@ export default function Perspectives() {
                 alt={perspectives[currentIndex].title}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </motion.div>
 
-            {/*Controles*/}
-
+            {/* Controles */}
             <div className="absolute h-80 md:h-96 w-full md:w-3/4 mx-2 md:mx-4 z-10 secondaryText">
               <button
                 onClick={prevSlide}
@@ -174,7 +127,7 @@ export default function Perspectives() {
               </button>
             </div>
 
-            {/* Proxima Imagem */}
+            {/* Próxima Imagem */}
             <div
               className="hidden md:block relative h-80 w-24 overflow-hidden rounded-md opacity-70"
               style={{
@@ -186,6 +139,7 @@ export default function Perspectives() {
                 alt={perspectives[nextIndex].title}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

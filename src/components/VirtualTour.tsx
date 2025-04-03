@@ -17,7 +17,7 @@ const VirtualTour = () => {
 
   return (
     <section className="py-10">
-      <div className="container mx-auto max-w-[1100px] px-4">
+      <div className="container mx-auto px-4">
         {/*titulo*/}
         <div className="text-center mb-6">
           <p className="text-sm secondaryText font-bold tracking-[3px] mb-1">

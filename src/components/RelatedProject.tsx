@@ -40,7 +40,7 @@ const RelatedProjects = () => {
 
   return (
     <section className="py-4">
-      <div className="container max-w-[1100px] mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-6">
           <svg
             width="160"
@@ -67,6 +67,7 @@ const RelatedProjects = () => {
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
               </div>
               <h3 className="text-base font-medium secondaryText">

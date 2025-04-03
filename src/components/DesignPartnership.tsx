@@ -5,7 +5,7 @@ import Link from "next/link";
 const DesignPartnership = () => {
   return (
     <section id="empreendimento" className="py-4">
-      <div className="container max-w-[1100px] mx-auto px-4">
+      <div className="containermx-auto px-4">
         {/*descrição*/}
         <div className="flex flex-col-reverse md:flex-row-reverse w-auto gap-2 md:gap-10 lg:gap-14 items-center secondaryText leading-relaxed">
           <div className="space-y-4 md:w-2/4 ">
