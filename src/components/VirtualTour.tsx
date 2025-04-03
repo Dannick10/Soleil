@@ -43,7 +43,7 @@ const VirtualTour = () => {
             <>
               <div className="absolute inset-0">
                 <Image
-                  src="/images/design/foot.jpg"
+                  src="/images/design/foot.webp"
                   alt="Tour Virtual Preview"
                   fill
                   className="object-contain"

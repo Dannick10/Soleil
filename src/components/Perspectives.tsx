@@ -15,7 +15,7 @@ export default function Perspectives() {
       { title: "Perspectiva ilustrada da Fachada", image: `/images/perspective/Fachada_EF.jpg` },
       { title: "Perspectiva ilustrada do Acesso", image: `/images/perspective/Detalhe_Fachada_EF.jpg` },
       { title: "Perspectiva ilustrada do Lobby", image: `/images/perspective/Lobby_EF.jpg` },
-      { title: "Perspectiva ilustrada do Salão de Festas", image: `/images/perspective/jantarDecorado.jpg` },
+      { title: "Perspectiva ilustrada do Salão de Festas", image: `/images/perspective/JantarDecorado.jpg` },
       { title: "Perspectiva ilustrada do Salão de Festas", image: `/images/perspective/Salao_de_festas.jpg` },
       { title: "Perspectiva ilustrada do Lounge Externo", image: `/images/perspective/Lounge_Externo.jpg` },
       { title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m", image: `/images/perspective/Piscina_Coberta_EF.jpg` },
