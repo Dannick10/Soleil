@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair, Philosopher } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const philosopher = Philosopher({
   variable: "--font-philosopher",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <div className={`flex min-h-screen flex-col bg-[#f7f7f7] pt-10 ${philosopher.className}`}>
         {children}
         </div>
+        <Footer/>
       </body>
     </html>
   );

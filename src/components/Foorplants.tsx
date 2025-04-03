@@ -3,13 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 
-  type foorPlans = {
-    title:string
-    image:string
-  }
+type foorPlans = {
+  title: string;
+  image: string;
+};
 
 const FloorPlans = () => {
-
   const patch = "/images/plantas";
 
   const floorPlans: foorPlans[] = [
@@ -60,18 +59,19 @@ const FloorPlans = () => {
         <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-4 lg:gap-6">
           <div className="md:w-[280px] lg:w-[320px] mb-4 md:mb-0">
             <div className="space-y-1">
-                {floorPlans.map((plan, index) => (
-                  <button
-                    onClick={() => setActivePlan(index)}
-                    className={`w-full text-left px-3 py-2 border text-sm transition-all duration-200 cursor-pointer ${
-                      activePlan === index
-                        ? "bg-[#0F1E45] text-[#f7f7f7] "
-                        : "border-[#0F1E45] hover:bg-[#0F1E45] hover:text-[#f7f7f7] secondaryText"
-                    }`}
-                  >
-                    {plan.title}
-                  </button>
-                ))}
+              {floorPlans.map((plan, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActivePlan(index)}
+                  className={`w-full text-left px-3 py-2 border text-sm transition-all duration-200 cursor-pointer ${
+                    activePlan === index
+                      ? "bg-[#0F1E45] text-[#f7f7f7] "
+                      : "border-[#0F1E45] hover:bg-[#0F1E45] hover:text-[#f7f7f7] secondaryText"
+                  }`}
+                >
+                  {plan.title}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -92,6 +92,6 @@ const FloorPlans = () => {
       </div>
     </section>
   );
-}
+};
 
-export default FloorPlans
+export default FloorPlans;

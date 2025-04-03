@@ -52,7 +52,6 @@ const DesignPartnership = () => {
                 width={450}
                 height={320}
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <svg

@@ -2,10 +2,15 @@ import { playfair } from "@/app/layout";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FiPhone } from "react-icons/fi";
+import HamburgerMenu from "./HamburugerMenu";
 
 const Header = () => {
+
   return (
-    <header className={ `fixed top-0 left-0 right-0 z-50 bg-[#f7f7f7] ${playfair.className}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#f7f7f7] ${playfair.className}`}
+    >
       <div className="container max-w-[1100px] px-4 mx-auto">
         <div className="flex items-center justify-between py-4">
           <div>
@@ -21,14 +26,11 @@ const Header = () => {
           </div>
 
           <div className="flex items-center">
-            <div className={`hidden md:flex items-center mr-6 gap-4`}>
-              <Image
-                src={"/icones/phone.svg"}
-                alt="telefone"
-                width={18}
-                height={18}
-                className="h-8 w-auto"
-              />
+
+            <div
+              className={`hidden md:flex items-center mr-4 gap-4 secondaryText text-xl`}
+            >
+              <FiPhone />
               <span className="secondaryText text-sm tracking-widest font-semibold">
                 Atendimento (SAC) 11 5242-1410
               </span>
@@ -37,6 +39,7 @@ const Header = () => {
             <button className="hidden md:block bg-[#182842] text-white hover:bg-[#f7f7f7] border border-[#182842] hover:text-[#182842] py-1 px-7 cursor-pointer tracking-wider">
               FALE COM CORRETOR
             </button>
+            <HamburgerMenu />
           </div>
         </div>
       </div>
