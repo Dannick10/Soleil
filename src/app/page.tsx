@@ -1,6 +1,7 @@
 import DesignPartnership from "@/components/DesignPartnership";
 import FloorPlans from "@/components/Foorplants";
 import Hero from "@/components/Hero";
+import Location from "@/components/Location";
 import NeighborhoodAdvantages from "@/components/NeighborhoodAdvantages";
 import Perspectives from "@/components/Perspectives";
 import PropertyDetails from "@/components/PropertyDetails";
@@ -17,6 +18,7 @@ export default function Home() {
         <NeighborhoodAdvantages/>
         <Perspectives/>
         <FloorPlans/>
+        <Location />
     </div>
   );
 }

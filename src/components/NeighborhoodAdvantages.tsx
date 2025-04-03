@@ -96,7 +96,7 @@ const NeighborhoodAdvantages = () => {
           {/*foto*/}
           <div className="w-full h-[378px] relative rounded-md overflow-hidden">
             <Image
-              src="/images/perspective/Detalhe_Fachada_EF.jpg"
+            src="/images/perspective/Detalhe_Fachada_EF.jpg"
               alt="Fachada do Soleil"
               fill
               className="object-cover"

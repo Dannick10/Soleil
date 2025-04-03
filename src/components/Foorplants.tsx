@@ -3,10 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 
+  type foorPlans = {
+    title:string
+    image:string
+  }
+
 const FloorPlans = () => {
+
   const patch = "/images/plantas";
 
-  const floorPlans = [
+  const floorPlans: foorPlans[] = [
     {
       title: "PLANTA-TIPO 4 SUÍTES 246 M²",
       image: `${patch}/PLANTA-TIPO4SUÍTES246M2.jpg`,
@@ -35,7 +41,7 @@ const FloorPlans = () => {
   const [activePlan, setActivePlan] = useState(0);
 
   return (
-    <section id="plantas" className="py-16">
+    <section id="plantas" className="py-4">
       <div className="container max-w-[1000px] mx-auto px-4">
         <div className="text-center mb-8">
           <svg
