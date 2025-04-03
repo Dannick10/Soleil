@@ -5,6 +5,7 @@ import { BiPin, BiShoppingBag } from "react-icons/bi";
 import { LuBuilding2 } from "react-icons/lu";
 import { FaGraduationCap } from "react-icons/fa";
 import { BsTree } from "react-icons/bs";
+import Link from "next/link";
 
 const Location = () => {
   const [activeTab, setActiveTab] = useState("map");
@@ -130,7 +131,9 @@ const Location = () => {
 
             <div className="flex gap-2 pt-4">
               <button className="btnPrimary text-sm">VEJA O CAMINHO</button>
+              <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
               <button className="btnSecondary text-sm">SAIBA MAIS</button>
+                </Link>
             </div>
           </div>
         </div>

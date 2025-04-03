@@ -1,6 +1,7 @@
 "use client";
 import { BiStar } from "react-icons/bi";
 import YouTubePlayer from "./VideoPlayer";
+import Link from "next/link";
 
 const VideoShowcase = () => {
   return (
@@ -60,9 +61,11 @@ const VideoShowcase = () => {
             </div>
 
             <div className="py-4">
+            <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
               <button className="btnSecondary border-white hover:bg-white hover:text-[#182842]">
                 SAIBA MAIS
               </button>
+              </Link>
             </div>
           </div>
 

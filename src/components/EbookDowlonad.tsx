@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const EbookDownload = () => {
   return (
@@ -33,14 +34,18 @@ const EbookDownload = () => {
               contemporânea no coração da Chácara Klabin.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-4 flex gap-2">
               <a
                 href="/book/Book_Soleil_Residences.pdf"
                 download="Soleil-by-Boca-do-Lobo.pdf"
-                className="btnPrimary py-2"
+                className="btnPrimary"
               >
                 BAIXAR BOOK COMPLETO
               </a>
+
+              <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
+              <button className="btnSecondary">SAIBA MAIS</button>
+              </Link>
             </div>
           </div>
         </div>
