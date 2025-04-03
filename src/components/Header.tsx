@@ -1,4 +1,4 @@
-import { philosopher, playfair } from "@/app/layout";
+import { playfair } from "@/app/layout";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

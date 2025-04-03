@@ -1,4 +1,5 @@
 import DesignPartnership from "@/components/DesignPartnership";
+import FloorPlans from "@/components/Foorplants";
 import Hero from "@/components/Hero";
 import NeighborhoodAdvantages from "@/components/NeighborhoodAdvantages";
 import Perspectives from "@/components/Perspectives";
@@ -15,6 +16,7 @@ export default function Home() {
         <DesignPartnership/>
         <NeighborhoodAdvantages/>
         <Perspectives/>
+        <FloorPlans/>
     </div>
   );
 }

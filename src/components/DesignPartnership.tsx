@@ -1,6 +1,4 @@
 "use client";
-
-import { playfair } from "@/app/layout";
 import Image from "next/image";
 
 const DesignPartnership = () => {
