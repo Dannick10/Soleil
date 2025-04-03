@@ -28,9 +28,9 @@ declare global {
           videoId: string;
           playerVars: Record<string, number | string>;
           events: {
-            onReady: () => void,
-            onStateChange: (event: { data: number }) => void
-          }
+            onReady: () => void;
+            onStateChange: (event: { data: number }) => void;
+          };
         }
       ) => YouTubePlayerInstance;
       PlayerState: Record<string, number>;
@@ -72,7 +72,10 @@ const YouTubePlayer = ({ videoId }: YouTubePlayerProps) => {
           events: {
             onReady: () => {
               const interval = setInterval(() => {
-                if (playerInstance.current?.getCurrentTime && playerInstance.current?.getDuration) {
+                if (
+                  playerInstance.current?.getCurrentTime &&
+                  playerInstance.current?.getDuration
+                ) {
                   const current = playerInstance.current.getCurrentTime();
                   const duration = playerInstance.current.getDuration();
                   setProgress((current / duration) * 100);
@@ -113,7 +116,9 @@ const YouTubePlayer = ({ videoId }: YouTubePlayerProps) => {
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const percent = (e.clientX - rect.left) / rect.width;
-    playerInstance.current?.seekTo(percent * playerInstance.current.getDuration());
+    playerInstance.current?.seekTo(
+      percent * playerInstance.current.getDuration()
+    );
   };
 
   return (
@@ -122,7 +127,13 @@ const YouTubePlayer = ({ videoId }: YouTubePlayerProps) => {
 
       {/* Thumbnail */}
       {progress <= 0 && (
-        <Image src="/images/design/thumb.jpg" alt="thumb" fill className="object-cover" />
+        <Image
+          src="/images/design/thumb.jpg"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="thumb"
+          fill
+          className="object-cover"
+        />
       )}
 
       {/* Controles customizados */}

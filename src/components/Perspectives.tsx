@@ -12,66 +12,21 @@ export default function Perspectives() {
 
   const perspectives = useMemo(
     () => [
-      {
-        title: "Perspectiva ilustrada da Fachada",
-        image: `/images/perspective/Fachada_EF.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Acesso",
-        image: `/images/perspective/Detalhe_Fachada_EF.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Lobby",
-        image: `/images/perspective/Lobby_EF.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Salão de Festas",
-        image: `/images/perspective/jantarDecorado.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Salão de Festas",
-        image: `/images/perspective/Salao_de_festas.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Lounge Externo",
-        image: `/images/perspective/Lounge_Externo.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m",
-        image: `/images/perspective/Piscina_Coberta_EF.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m",
-        image: `/images/perspective/Piscina_Coberta_Spa.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada da Brinquedoteca",
-        image: `/images/perspective/Brinquedoteca.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada da Piscina Descoberta",
-        image: `/images/perspective/Piscina_Descoberta.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada da Piscina Descoberta",
-        image: `/images/perspective/Piscina_Descoberta.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada da Quadra de Tênis",
-        image: `/images/perspective/Quadra_Tenis_EF.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Fitness",
-        image: `/images/perspective/Fitness.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Fitness",
-        image: `/images/perspective/Fitness02_EF2.jpg`,
-      },
-      {
-        title: "Perspectiva ilustrada do Living",
-        image: `/images/perspective/Living_Decorado_EF2_v2.jpg`,
-      },
+      { title: "Perspectiva ilustrada da Fachada", image: `/images/perspective/Fachada_EF.jpg` },
+      { title: "Perspectiva ilustrada do Acesso", image: `/images/perspective/Detalhe_Fachada_EF.jpg` },
+      { title: "Perspectiva ilustrada do Lobby", image: `/images/perspective/Lobby_EF.jpg` },
+      { title: "Perspectiva ilustrada do Salão de Festas", image: `/images/perspective/jantarDecorado.jpg` },
+      { title: "Perspectiva ilustrada do Salão de Festas", image: `/images/perspective/Salao_de_festas.jpg` },
+      { title: "Perspectiva ilustrada do Lounge Externo", image: `/images/perspective/Lounge_Externo.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m", image: `/images/perspective/Piscina_Coberta_EF.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Coberta com Raia de 25 m", image: `/images/perspective/Piscina_Coberta_Spa.jpg` },
+      { title: "Perspectiva ilustrada da Brinquedoteca", image: `/images/perspective/Brinquedoteca.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Descoberta", image: `/images/perspective/Piscina_Descoberta.jpg` },
+      { title: "Perspectiva ilustrada da Piscina Descoberta", image: `/images/perspective/Piscina_Descoberta.jpg` },
+      { title: "Perspectiva ilustrada da Quadra de Tênis", image: `/images/perspective/Quadra_Tenis_EF.jpg` },
+      { title: "Perspectiva ilustrada do Fitness", image: `/images/perspective/Fitness.jpg` },
+      { title: "Perspectiva ilustrada do Fitness", image: `/images/perspective/Fitness02_EF2.jpg` },
+      { title: "Perspectiva ilustrada do Living", image: `/images/perspective/Living_Decorado_EF2_v2.jpg` },
     ],
     []
   );
@@ -90,10 +45,10 @@ export default function Perspectives() {
     );
   };
 
-  const prevIndex =
-    currentIndex === 0 ? perspectives.length - 1 : currentIndex - 1;
-  const nextIndex =
-    currentIndex === perspectives.length - 1 ? 0 : currentIndex + 1;
+  const prevIndex = currentIndex === 0 ? perspectives.length - 1 : currentIndex - 1;
+  const nextIndex = currentIndex === perspectives.length - 1 ? 0 : currentIndex + 1;
+
+
 
   return (
     <section id="perspectivas" className="py-16">
@@ -150,6 +105,7 @@ export default function Perspectives() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority // Prioriza o carregamento
               />
             </motion.div>
 

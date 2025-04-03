@@ -52,6 +52,7 @@ const DesignPartnership = () => {
               <Image
                 src="/images/design/movel.jpg"
                 alt="Fachada do Soleil"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 width={450}
                 height={320}
                 className="object-cover"
