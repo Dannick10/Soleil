@@ -6,7 +6,7 @@ import Link from "next/link";
 const VideoShowcase = () => {
   return (
     <section className="mt-10 bg-[#0F1E45] text-white relative">
-      <div className="container mx-auto py-4 px-4">
+      <div className="container mx-auto py-4 px-4  max-w-[1600px] lg:px-[160px]">
         {/*fundo do titulo*/}
         <div className="bg-[#f7f7f7] rounded-br-md w-[95%] md:w-1/2 h-20 absolute top-0 left-0">
           <div className="bg-[#f7f7f7] w-2 h-1/2 absolute top-0 -right-2"></div>

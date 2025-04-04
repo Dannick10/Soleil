@@ -13,17 +13,21 @@ import VirtualTour from "@/components/VirtualTour";
 export default function Home() {
   return (
     <div>
-        <Hero/>
-        <PropertyDetails/>
-        <VideoShowcase/>
-        <DesignPartnership/>
-        <NeighborhoodAdvantages/>
-        <Perspectives/>
-        <FloorPlans/>
+   <div className="mx-auto max-w-[1600px] lg:px-[160px]">
+        <Hero />
+        <PropertyDetails />
+      </div>
+      <VideoShowcase />
+      <div className="mx-auto max-w-[1600px] lg:px-[160px]">
+        <DesignPartnership />
+        <NeighborhoodAdvantages />
+        <Perspectives />
+        <FloorPlans />
         <Location />
-        <VirtualTour/>
-        <RelatedProjects/>
-        <EbookDownload/>
+        <VirtualTour />
+        <RelatedProjects />
+        <EbookDownload />
+      </div>
     </div>
   );
 }

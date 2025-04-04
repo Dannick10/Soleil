@@ -57,7 +57,7 @@ const RelatedProjects = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center gap-4">
           {projects.map((project, index) => (
             <Link href={project.link} target="_blank" key={index}>
             <div className="group cursor-pointer">

@@ -5,7 +5,7 @@ import Link from "next/link";
 const EbookDownload = () => {
   return (
     <section className="py-16 bg-gradient-to-t from-[#F8F5EF] to-transparent">
-      <div className="container mx-auto px-4">
+      <div className="px-4">
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
           <div className="relative">
             <Image
