@@ -30,7 +30,7 @@ const Header = () => {
               className={`hidden md:flex items-center mr-4 gap-4 secondaryText text-xl`}
             >
               <FiPhone />
-              <span className="secondaryText text-sm tracking-widest font-semibold">
+              <span className="secondaryText text-sm tracking-[3px] font-semibold">
                 Atendimento (SAC) 11 5242-1410
               </span>
             </div>

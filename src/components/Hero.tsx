@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { RxRulerSquare } from "react-icons/rx";
-import { IoCarSportOutline } from "react-icons/io5";
+import { LuCarFront } from "react-icons/lu";
 import { IoBedOutline } from "react-icons/io5";
 import { ReactNode } from "react";
 
@@ -26,7 +26,7 @@ const Hero = () => {
       description: "com hall privativo",
     },
     {
-      image: <IoCarSportOutline />,
+      image: <LuCarFront />,
       title: "3 vagas",
       description: "Garagem privativa",
     },
@@ -74,15 +74,15 @@ const Hero = () => {
           </div>
 
           {/*cards*/}
-          <div className="absolute -bottom-10 md:bottom-0 left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 rounded-t-lg md:rounded-none md:rounded-tl-lg bg-[#f7f7f7] py-2 md:py-4 w-[310px] md:w-[350px] flex items-center justify-center">
+          <div className="absolute -bottom-10 md:bottom-0 left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 rounded-t-lg md:rounded-none md:rounded-tl-lg bg-[#f7f7f7] py-2 md:py-4 w-[90%] md:w-[381px] flex items-center justify-center">
             <div className="flex items-center divide-x divide-[#8a641e]">
               {itemsHero.map((items, index) => (
                 <div className="flex flex-col items-center px-2" key={index}>
                   <div className="flex flex-col md:flex-row justify-center items-center md:gap-2 relative">
                     <p className="primaryText text-base">{items.image}</p>
-                    <p className="text-xl primaryText">{items.title}</p>
+                    <p className="text-base md:text-xl primaryText">{items.title}</p>
                   </div>
-                  <p className="text-xs text-black">{items.description}</p>
+                  <p className="text-xs text-black tracking-widest text-center">{items.description}</p>
                 </div>
               ))}
             </div>

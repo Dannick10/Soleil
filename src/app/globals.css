@@ -1,28 +1,27 @@
 @import "tailwindcss";
 @layer theme, base, components, utilities;
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-.playfair {
-  font-family: var(--font-playfair), serif;
 }
 
 @layer components {
   .primaryText {
-    @apply text-[#8a641e]
+    @apply text-[#C9A96E];
   }
   .secondaryText {
-    @apply text-[#182842]
+    @apply text-[#182842];
   }
   .accentText {
-    @apply text-[#1E1E1E]
+    @apply text-[#1E1E1E];
   }
   .btnPrimary {
-    @apply bg-[#182842] text-white hover:bg-[#f7f7f7] border border-[#182842] hover:text-[#182842] py-1 px-7 cursor-pointer tracking-wider transition-all duration-200
+    @apply bg-[#182842] text-white hover:bg-[#f7f7f7] border border-[#182842] hover:text-[#182842] py-1 px-7 cursor-pointer tracking-widest transition-all duration-200 text-base font-semibold
   }
   .btnSecondary {
-    @apply bg-none border border-[#182842] hover:bg-[#182842] hover:text-amber-50 py-1 px-7 cursor-pointer tracking-wider transition-all duration-200
+    @apply bg-none border border-[#182842] hover:bg-[#182842] hover:text-amber-50 py-1 px-7 cursor-pointer tracking-widest transition-all duration-200 text-base font-semibold;
   }
 }

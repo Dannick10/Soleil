@@ -72,18 +72,18 @@ const NeighborhoodAdvantages = () => {
 
         <div className="flex flex-col-reverse md:flex-row w-auto gap-2 lg:gap-10 items-center secondaryText leading-relaxed">
           <div className="space-y-4 md:w-2/4 ">
-            <h2 className="text-xl font-bold uppercase">
+            <h2 className="text-2xl font-bold uppercase">
               PRAÇA KANT CHÁCARA KLABIN
             </h2>
 
-            <p className="text-sm leading-relaxed">
+            <p className="text-base">
               As vantagens de se morar na Chácara Klabin não são poucas. Um
               bairro nobre e residencial com infraestrutura de comércio
               essencial, transporte público e fácil acesso por veículo
               automotivo, lazer com praças pet e parques.
             </p>
 
-            <p className="text-sm leading-relaxed">
+            <p className="text-base">
               Próximo a instituições educacionais de prestígio como o Liceu
               Pasteur, Colégio Marista Arquidiocesano e a faculdade ESPM, o
               Soleil Klabin oferece o equilíbrio perfeito entre tranquilidade e
@@ -97,7 +97,7 @@ const NeighborhoodAdvantages = () => {
             </div>
           </div>
           {/*foto*/}
-          <div className="w-full h-[378px] relative rounded-md overflow-hidden">
+          <div className="w-full md:w-[500px] h-[378px] relative rounded-md overflow-hidden">
             <Image
               src="/images/perspective/Detalhe_Fachada_EF.jpg"
               alt="Fachada do Soleil"
@@ -120,10 +120,10 @@ const NeighborhoodAdvantages = () => {
                     <span>{item.icon}</span>
                     <div className="w-10 h-10 inset-2 top-0 left-0 border-b border-e rounded-full border-yellow-400 border-e-amber-300 group-hover:animate-spin absolute opacity-0 group-hover:opacity-100 duration-200"></div>
                   </div>
-                  <h3 className="text-xl font-bold">{item.title}</h3>
+                  <h3 className="text-[20px] font-bold">{item.title}</h3>
                 </div>
               </div>
-              <p className="text-sm secondaryText">{item.description}</p>
+              <p className="text-base secondaryText">{item.description}</p>
             </div>
           ))}
         </div>

@@ -151,13 +151,23 @@ const YouTubePlayer = ({ videoId }: YouTubePlayerProps) => {
 
         {/* Play Controle */}
         <div className="flex justify-center items-center">
-          <button
-            onClick={togglePlay}
-            aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
-            className="bg-gray-800/90 p-4 rounded-full hover:scale-110 transition-all duration-200 cursor-pointer"
-          >
-            {isPlaying ? <BiPause /> : <BiPlay />}
-          </button>
+          {isPlaying ? (
+            <button
+              onClick={togglePlay}
+              aria-label={"Pausar vídeo"}
+              className="bg-gray-800/90 p-4 rounded-full hover:scale-110 transition-all duration-200 cursor-pointer opacity-0 group-hover:opacity-100"
+            >
+              <BiPause />
+            </button>
+          ) : (
+            <button
+              onClick={togglePlay}
+              aria-label={"Reproduzir vídeo"}
+              className="bg-gray-800/90 p-4 rounded-full hover:scale-110 transition-all duration-200 cursor-pointer"
+            >
+              <BiPlay />
+            </button>
+          )}
         </div>
 
         {/* Barra de Progresso */}

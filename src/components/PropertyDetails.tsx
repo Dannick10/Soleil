@@ -1,10 +1,11 @@
 "use client";
+import { playfair } from "@/app/lib/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
 const PropertyDetails = () => {
   return (
-    <section id="empreendimento" className="py-10">
+    <section id="empreendimento" className="py-14 md:py-10">
       <div className="container mx-auto px-4">
         <div className="text-center pt-8 pb-2">
           <div className="flex flex-col gap-2">
@@ -31,12 +32,12 @@ const PropertyDetails = () => {
 
         <div className="flex flex-col-reverse md:flex-row w-auto gap-2 lg:gap-10 items-center secondaryText">
           <div className="space-y-4 md:w-2/4 ">
-            <h2 className="text-xl font-bold uppercase">
+            <h2 className="text-2xl font-bold uppercase">
               LOCALIZAÇÃO PRIVILEGIADA 
               NA CHÁCARA KLABIN
             </h2>
 
-            <p className="text-sm leading-relaxed">
+            <p className="text-base">
               O Soleil by Boca do Lobo está em frente à Praça Kant, na Rua
               Garapeba, um grande espaço arborizado e verde que se abre em meio
               à cidade. Uma localização privilegiada, onde é possível desfrutar
@@ -44,18 +45,18 @@ const PropertyDetails = () => {
               principais regiões de São Paulo.
             </p>
 
-            <p className="text-sm leading-relaxed">
+            <p className="text-base">
             Um projeto onde cada detalhe é contornado por um brilho único e um calor que acolhe tudo à sua volta. Revelando uma beleza incomparável que se renova todas as manhãs.
             </p>
 
             <div className="pt-4">
               <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
-              <button className="btnSecondary">SAIBA MAIS</button>
+              <button className={`btnSecondary ${playfair.className}`}>SAIBA MAIS</button>
               </Link>
             </div>
           </div>
 
-          <div className="w-full h-[378px] relative rounded-md overflow-hidden">
+          <div className="w-full md:w-[500px] lg:w-full h-[378px] relative rounded-md overflow-hidden">
             <Image
               src="/images/perspective/Embasamento_EF.jpg"
               alt="Fachada do Soleil"

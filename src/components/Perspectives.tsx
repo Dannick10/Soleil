@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
@@ -31,19 +31,19 @@ export default function Perspectives() {
     []
   );
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setMemoryIndex(currentIndex);
     setCurrentIndex((prevIndex) =>
       prevIndex === perspectives.length - 1 ? 0 : prevIndex + 1
     );
-  };
-
-  const prevSlide = () => {
+  }, [currentIndex, perspectives.length]);
+  
+  const prevSlide = useCallback(() => {
     setMemoryIndex(currentIndex);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? perspectives.length - 1 : prevIndex - 1
     );
-  };
+  }, [currentIndex, perspectives.length]);
 
   const prevIndex = currentIndex === 0 ? perspectives.length - 1 : currentIndex - 1;
   const nextIndex = currentIndex === perspectives.length - 1 ? 0 : currentIndex + 1;
@@ -64,7 +64,7 @@ export default function Perspectives() {
           >
             <rect width="160" height="4" fill="#B89355" />
           </svg>
-          <h2 className="text-2xl font-light text-gray-900 mb-2">
+          <h2 className="secondaryText text-2xl md:text-4xl font-bold tracking-widest">
             Perspectivas
           </h2>
         </div>
@@ -146,7 +146,7 @@ export default function Perspectives() {
           </div>
 
           <div className="text-center mt-4">
-            <p className="text-sm secondaryText tracking-wide">
+            <p className="font-bold secondaryText tracking-wider">
               {perspectives[currentIndex].title}
             </p>
 

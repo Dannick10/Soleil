@@ -52,7 +52,7 @@ const RelatedProjects = () => {
           >
             <rect width="160" height="4" fill="#B89355" />
           </svg>
-          <h2 className="text-2xl font-light secondaryText mb-2">
+          <h2 className="secondaryText text-2xl md:text-4xl font-bold tracking-widest">
             Empreendimentos
           </h2>
         </div>
@@ -61,7 +61,7 @@ const RelatedProjects = () => {
           {projects.map((project, index) => (
             <Link href={project.link} target="_blank" key={index}>
             <div className="group cursor-pointer">
-              <div className="relative w-60 h-60 overflow-hidden mb-3">
+              <div className="relative w-64 h-60 overflow-hidden mb-3">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -70,10 +70,10 @@ const RelatedProjects = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
               </div>
-              <h3 className="text-base font-medium secondaryText">
+              <h3 className="text-base font-medium tracking-wide secondaryText">
                 {project.title}
               </h3>
-              <p className="text-xs text-gray-500">{project.status}</p>
+              <p className="text-sm font-bold secondaryText">{project.status}</p>
             </div>
                   </Link>
           ))}
