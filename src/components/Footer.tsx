@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#182842] px-10 py-8 md:py-4 max-w-[1600px] lg:px-[160px]">
-      <div className="container flex flex-col-reverse gap-4 md:flex-row justify-between items-center mx-auto">
+    <footer className="bg-[#182842] px-10 py-8 md:py-4">
+      <div className="container flex flex-col-reverse gap-4 md:flex-row justify-between items-center mx-auto max-w-[1600px] lg:px-[160px]">
         <p className="text-sm text-[#f7f7f7]">
         © 2025 - Lavvi Empreendimentos Imobiliários S/A.
         </p>

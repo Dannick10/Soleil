@@ -70,8 +70,8 @@ const NeighborhoodAdvantages = () => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row w-auto gap-2 lg:gap-10 items-center secondaryText leading-relaxed">
-          <div className="space-y-4 md:w-2/4 ">
+        <div className="flex flex-col-reverse md:flex-row w-auto gap-2 lg:gap-10 items-center secondaryText">
+          <div className="space-y-4 md:w-2/4 max-w-[515px]">
             <h2 className="text-2xl font-bold uppercase">
               PRAÇA KANT CHÁCARA KLABIN
             </h2>
@@ -97,7 +97,7 @@ const NeighborhoodAdvantages = () => {
             </div>
           </div>
           {/*foto*/}
-          <div className="w-full md:w-[500px] h-[378px] relative rounded-md overflow-hidden">
+          <div className="w-full md:w-[500px] lg:1/2 h-[378px] relative rounded-md overflow-hidden">
             <Image
               src="/images/perspective/Detalhe_Fachada_EF.jpg"
               alt="Fachada do Soleil"

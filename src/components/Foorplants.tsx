@@ -59,7 +59,7 @@ const FloorPlans = () => {
         </div>
 
         <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-4 lg:gap-6">
-          <div className="md:w-[480px] lg:w-[320px] mb-4 md:mb-0">
+          <div className="md:w-[480px] lg:w-[439px] mb-4 md:mb-0">
             <div className="space-y-4">
               {floorPlans.map((plan, index) => (
                 <button

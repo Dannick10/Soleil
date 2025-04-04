@@ -63,7 +63,7 @@ const Hero = () => {
         {/*imagem*/}
 
         <div className="relative flex justify-center">
-          <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden rounded-lg">
+          <div className="relative w-full h-[350px] md:h-[600px] overflow-hidden rounded-lg">
             <Image
               src="/images/design/capa.jpg"
               alt="Soleil by Boca do Lobo"
