@@ -6,7 +6,6 @@ import Location from "@/components/Location";
 import NeighborhoodAdvantages from "@/components/NeighborhoodAdvantages";
 import Perspectives from "@/components/Perspectives";
 import PropertyDetails from "@/components/PropertyDetails";
-import RelatedProjects from "@/components/RelatedProject";
 import VideoShowcase from "@/components/VideoShowCase";
 import VirtualTour from "@/components/VirtualTour";
 
@@ -25,7 +24,6 @@ export default function Home() {
         <FloorPlans />
         <Location />
         <VirtualTour />
-        <RelatedProjects />
         <EbookDownload />
       </div>
     </div>
