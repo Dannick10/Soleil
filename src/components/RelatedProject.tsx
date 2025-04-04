@@ -57,25 +57,25 @@ const RelatedProjects = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <Link href={project.link} target="_blank" key={index}>
-            <div className="group cursor-pointer">
-              <div className="relative w-64 h-60 overflow-hidden mb-3">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              <div className="group cursor-pointer">
+                <div className="relative w-full h-auto aspect-[4/3] overflow-hidden mb-3">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                </div>
+                <h3 className="text-xl font-medium tracking-wide secondaryText">
+                  {project.title}
+                </h3>
+                <p className="text-sm font-bold secondaryText">{project.status}</p>
               </div>
-              <h3 className="text-base font-medium tracking-wide secondaryText">
-                {project.title}
-              </h3>
-              <p className="text-sm font-bold secondaryText">{project.status}</p>
-            </div>
-                  </Link>
+            </Link>
           ))}
         </div>
 

@@ -30,7 +30,7 @@ const PropertyDetails = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-2 lg:gap-10 items-center secondaryText">
+        <div className="flex flex-col md:flex-row justify-between gap-2 lg:gap-10 items-center secondaryText">
           <div className="space-y-4 w-full md:w-[515px]">
             <h2 className="text-2xl font-bold uppercase">
               LOCALIZAÇÃO PRIVILEGIADA NA CHÁCARA KLABIN
