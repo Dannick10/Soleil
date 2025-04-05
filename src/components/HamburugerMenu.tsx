@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
+import { MdClose as X } from "react-icons/md";
 
 type navITems = {
   name: string;
@@ -53,7 +53,7 @@ const HamburgerMenu = () => {
   return (
     <>
       <button
-        className="flex md:hidden flex-col justify-center items-center gap-1.5 w-12 h-12 rounded-md focus:outline-none"
+        className="flex md:hidden flex-col justify-center items-center gap-1.5 w-12 h-12 rounded-md focus:outline-none cursor-pointer"
         onClick={handleToggleMenu}
         aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
         aria-expanded={isOpen}
@@ -95,7 +95,7 @@ const HamburgerMenu = () => {
               className="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-50 shadow-xl border-l-2 border-[#C9A96E]"
             >
               <div className="flex flex-col h-full">
-                <div className="p-6 border-b border-gray-100">
+                <div className="flex justify-between p-6 border-b border-gray-100">
                   <Image
                     src="/images/logo.svg"
                     alt="Lavvi"
@@ -103,6 +103,13 @@ const HamburgerMenu = () => {
                     height={30}
                     className="h-8 w-auto"
                   />
+                  <button
+                    onClick={handleToggleMenu}
+                    className=" secondaryText cursor-pointer"
+                    aria-label="Fechar"
+                  >
+                    <X className="h-10 w-10" />
+                  </button>
                 </div>
 
                 <nav className="flex-1 overflow-y-auto py-6">
@@ -122,16 +129,11 @@ const HamburgerMenu = () => {
                 </nav>
 
                 <div className="p-6 border-t border-gray-100">
-                  <div className="flex items-center mb-6">
-                    <FiPhone className="h-5 w-5 mr-2 secondaryText" />
-                    <span className="text-sm secondaryText">
-                      Atendimento (SAC) 11 5242-1410
-                    </span>
-                  </div>
-
-                  <button className="btnPrimary w-full text-sm">
-                    FALE COM CORRETOR
-                  </button>
+                  <Link href={"#contato"}>
+                    <button className="btnPrimary w-full text-sm">
+                      FALE COM CORRETOR
+                    </button>
+                  </Link>
                 </div>
 
                 <p className="text-center text-gray-600 text-sm mb-6">

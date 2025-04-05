@@ -1,9 +1,12 @@
 "use client";
 import { playfair } from "@/app/lib/fonts";
 import Image from "next/image";
-import Link from "next/link";
+import { useModal } from "./form/context/ModalContext";
 
 const PropertyDetails = () => {
+
+  const { onChangeModal } = useModal();
+
   return (
     <section id="empreendimento" className="py-14 md:py-10">
       <div className="mx-auto px-4">
@@ -43,14 +46,14 @@ const PropertyDetails = () => {
               principais regiões de São Paulo.
             </p>
             <p className="text-base">
-              Um projeto onde cada detalhe é contornado por um brilho único e um calor que acolhe tudo à sua volta. Revelando uma beleza incomparável que se renova todas as manhãs.
+              Um projeto onde cada detalhe é contornado por um brilho único e um
+              calor que acolhe tudo à sua volta. Revelando uma beleza
+              incomparável que se renova todas as manhãs.
             </p>
             <div className="pt-4">
-              <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
-                <button className={`btnSecondary ${playfair.className}`}>
-                  SAIBA MAIS
-                </button>
-              </Link>
+              <button className={`btnSecondary ${playfair.className}`} onClick={onChangeModal}>
+                SAIBA MAIS
+              </button>
             </div>
           </div>
 

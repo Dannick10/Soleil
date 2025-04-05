@@ -1,9 +1,11 @@
 "use client";
 import { BiStar } from "react-icons/bi";
 import YouTubePlayer from "./VideoPlayer";
-import Link from "next/link";
+import { useModal } from "./form/context/ModalContext";
 
 const VideoShowcase = () => {
+  const { onChangeModal } = useModal();
+
   return (
     <section className="mt-10 bg-[#0F1E45] text-white relative">
       <div className="container mx-auto py-4 px-4  max-w-[1600px] lg:px-[160px]">
@@ -15,7 +17,7 @@ const VideoShowcase = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center pt-8">
           <div className="relative space-y-4">
-              {/*titulo*/}
+            {/*titulo*/}
             <div className="relative xl:-top-2">
               <div className="absolute flex justify-center items-center gap-4 -top-8 left-0">
                 <BiStar className="primaryText" />
@@ -68,15 +70,14 @@ const VideoShowcase = () => {
             </div>
 
             <div className="py-4">
-              <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
-                <button
-                  className={
-                    "btnSecondary border-white hover:bg-white hover:text-[#182842]"
-                  }
-                >
-                  SAIBA MAIS
-                </button>
-              </Link>
+              <button
+                className={
+                  "btnSecondary border-white hover:bg-white hover:text-[#182842]"
+                }
+                onClick={onChangeModal}
+              >
+                SAIBA MAIS
+              </button>
             </div>
           </div>
 

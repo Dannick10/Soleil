@@ -158,7 +158,7 @@ export default function Perspectives() {
                     onClick={() => setCurrentIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all border border-[#C9A96E] cursor-pointer duration-200 hover:scale-125 ${
                       index === currentIndex
-                        ? "bg-[#C9A96E] w-4"
+                        ? "bg-[#C9A96E]"
                         : "bg-[#EFE5D3]"
                     }`}
                     aria-label={`Go to slide ${index + 1}`}

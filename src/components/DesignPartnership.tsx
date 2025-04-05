@@ -1,24 +1,26 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { useModal } from "./form/context/ModalContext";
 
 const DesignPartnership = () => {
+  const { onChangeModal } = useModal();
+
   return (
     <section id="empreendimento" className="py-4">
       <div className="container mx-auto px-4">
         {/*descrição*/}
         <div className="flex flex-col-reverse md:flex-row-reverse w-auto gap-2 md:gap-10 lg:gap-14 items-center justify-center secondaryText">
           <div className="space-y-4 md:w-2/4 max-w-[462px]">
-          <svg
-            width="120"
-            height="4"
-            viewBox="0 0 160 1"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="my-4"
-          >
-            <rect width="120" height="4" fill="#B89355" />
-          </svg>
+            <svg
+              width="120"
+              height="4"
+              viewBox="0 0 160 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="my-4"
+            >
+              <rect width="120" height="4" fill="#B89355" />
+            </svg>
             <h2 className="text-2xl font-bold uppercase tracking-wider">
               DESIGN DE <span className="primaryText">LUXO</span>
               <br />
@@ -40,9 +42,9 @@ const DesignPartnership = () => {
             </p>
 
             <div className="pt-4">
-            <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
-              <button className="btnSecondary">SAIBA MAIS</button>
-              </Link>
+              <button className="btnSecondary" onClick={onChangeModal}>
+                SAIBA MAIS
+              </button>
             </div>
           </div>
 

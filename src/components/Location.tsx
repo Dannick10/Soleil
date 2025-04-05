@@ -6,8 +6,12 @@ import { LuBuilding2 } from "react-icons/lu";
 import { FaGraduationCap } from "react-icons/fa";
 import { BsTree } from "react-icons/bs";
 import Link from "next/link";
+import { useModal } from "./form/context/ModalContext";
 
 const Location = () => {
+
+  const { onChangeModal } = useModal()
+
   const [activeTab, setActiveTab] = useState("map");
 
   const locationFeatures = [
@@ -133,9 +137,9 @@ const Location = () => {
               <Link href={"https://www.google.com/maps/place/R.+Garapeba,+74+-+Jardim+Vila+Mariana,+S%C3%A3o+Paulo+-+SP,+04116-210/@-23.5924597,-46.6259309,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5bcfe60e28cb:0x16c0cb1c85040574!8m2!3d-23.5924597!4d-46.6233506?entry=tts&g_ep=EgoyMDI1MDMwNC4wIPu8ASoASAFQAw%3D%3D"} target="_blank">
               <button className="btnPrimary text- w-full">VEJA O CAMINHO</button>
               </Link>
-              <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
-              <button className="btnSecondary w-full">SAIBA MAIS</button>
-                </Link>
+
+              <button className="btnSecondary" onClick={onChangeModal}>SAIBA MAIS</button>
+
             </div>
           </div>
         </div>

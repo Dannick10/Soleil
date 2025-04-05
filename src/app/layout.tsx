@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { philosopher, playfair } from "./lib/fonts"
+import { philosopher, playfair } from "./lib/fonts";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ModalProvider } from "@/components/form/context/ModalContext";
 
 export const metadata: Metadata = {
   title: "Soleil by Boca do Lobo | Lançamento na Chácara Klabin",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     "Imóveis Lavvi",
     "Apartamento 4 suítes",
     "Imóvel de luxo SP",
-    "Apartamento com hall privativo"
+    "Apartamento com hall privativo",
   ],
   openGraph: {
     title: "Soleil by Boca do Lobo | Alto padrão na Chácara Klabin",
@@ -45,11 +46,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${philosopher.className} ${playfair.variable}`}>
-        <Header />
-        <div className={`flex min-h-screen flex-col bg-[#f7f7f7] pt-10`}>
-        {children}
-        </div>
-        <Footer/>
+        <ModalProvider>
+          <Header />
+          <div className={`flex min-h-screen flex-col bg-[#f7f7f7] pt-10`}>
+            {children}
+          </div>
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );

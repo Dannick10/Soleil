@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useModal } from "./form/context/ModalContext";
 
 const EbookDownload = () => {
+  const { onChangeModal } = useModal();
+
   return (
     <section className="py-16 bg-gradient-to-t from-[#F8F5EF] to-transparent">
       <div className="px-4">
@@ -32,7 +35,7 @@ const EbookDownload = () => {
               >
                 BOOK{" "}
                 <tspan x="52" dy="12">
-                DIGITAL
+                  DIGITAL
                 </tspan>
               </text>
             </svg>
@@ -86,16 +89,17 @@ const EbookDownload = () => {
               <a
                 href="/book/Book_Soleil_Residences.pdf"
                 download="Soleil-by-Boca-do-Lobo.pdf"
-                className="btnPrimary text-center "
+                className="btnPrimary text-center w-full"
               >
-                BAIXAR BOOK COMPLETO
+                BAIXAR BOOK
               </a>
 
-              <Link href="https://relacionamento.lavvi.com.br/acesso?_gl=1%2aru8mrx%2a_gcl_aw%2aR0NMLjE3NDM1MzExMTEuQ2owS0NRanduYTZfQmhDYkFSSXNBTElkMlowcmloMHU2eTFIcEtJeUowWl93d1VTY0dHME05cy12OHdlVUVhSl9QYzU2QW5UOGg1Y0lGOGFBcjlNRUFMd193Y0I.%2a_gcl_au%2aMjAzMzcyOTAwLjE3NDMyNjY1MTc.">
-                <button className="btnSecondary secondaryText w-full">
-                  SAIBA MAIS
-                </button>
-              </Link>
+              <button
+                className="btnSecondary secondaryText w-full"
+                onClick={onChangeModal}
+              >
+                SAIBA MAIS
+              </button>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Perspectives from "@/components/Perspectives";
 import PropertyDetails from "@/components/PropertyDetails";
 import VideoShowcase from "@/components/VideoShowCase";
 import VirtualTour from "@/components/VirtualTour";
+import ContactFormInline from "@/components/form/ContactFormInline";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <Location />
         <VirtualTour />
         <EbookDownload />
+        <ContactFormInline/> 
       </div>
     </div>
   );
