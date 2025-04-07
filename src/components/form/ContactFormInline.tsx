@@ -81,7 +81,7 @@ const ContactFormInline = () => {
         <div className="max-w-2xl mx-auto">
           <div className="bg-gray-50 p-8 rounded-lg">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <Mail className="h-5 w-5 secondaryText" />
+              <Mail className="h-5 w-5 secondaryText hidden md:block" />
               <p className="text-gray-600 text-center">
                 Deixe seus dados e nós enviaremos um e-mail para você.
               </p>
